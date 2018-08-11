@@ -1,0 +1,691 @@
+<!---
+# [![](http://md.littletools.ml/image/favicon.ico) markdown简要语法说明](http://md.littletools.ml)
+
+
+
+## 1. 标题
+
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+
+~~~
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+~~~
+
+
+
+
+
+## 2. 加粗，斜体
+
+**加粗**
+__加粗__
+*斜体*
+_斜体_
+
+~~~
+**加粗**
+__加粗__
+*斜体*
+_斜体_
+~~~
+
+
+
+
+
+## 3. 链接，图片
+
+[百度超链接](http://www.baidu.com)
+
+[常用语参考文献的，带提示的超链接][1]
+[1]:http://www.baidu.com "出自www.baidu.com"
+
+![百度图标，在链接失效的时候显示，本文字]()
+
+![百度图标，在链接失效的时候显示，本文字](https://www.baidu.com/img/baidu_jgylogo3.gif)
+
+[![百度图标，在链接失效的时候显示，本文字](https://www.baidu.com/img/baidu_jgylogo3.gif)](http://www.baidu.com)
+
+```
+[百度超链接](http://www.baidu.com)
+
+[常用语参考文献的，带提示的超链接][1]
+[1]:http://www.baidu.com "出自www.baidu.com"
+
+![百度图标，在链接失效的时候显示，本文字]()
+
+![百度图标，在链接失效的时候显示，本文字](https://www.baidu.com/img/baidu_jgylogo3.gif)
+
+[![百度图标，在链接失效的时候显示，本文字](https://www.baidu.com/img/baidu_jgylogo3.gif)](http://www.baidu.com)
+```
+
+
+
+
+
+## 4. 层次
+
+1. 第一节
+2. 第二节
+    1. 第一小节（推荐每层次缩进四个空格)  
+    2. 第二小节  
+        1. 第一小小节
+        2. 第二小小节
+        3. 第三小小节
+    3. 第三小节
+3. 第三节
+
+```
+1. 第一节
+2. 第二节
+    1. 第一小节（推荐每层次缩进四个空格)  
+    2. 第二小节  
+        1. 第一小小节
+        2. 第二小小节
+        3. 第三小小节
+    3. 第三小节
+3. 第三节
+```
+
+1. 第一节
+*  第二节
+    1. 第一小节（推荐每层次缩进四个空格)  
+    *  第二小节  
+        1. 第一小小节
+        *  第二小小节
+        *  第三小小节
+    *  第三小节
+*  第三节
+
+```
+1. 第一节
+*  第二节
+    1. 第一小节（推荐每层次缩进四个空格)  
+    *  第二小节  
+        1. 第一小小节
+        *  第二小小节
+        *  第三小小节
+    *  第三小节
+*  第三节
+```
+
+* 第一节
+* 第二节
+    * 第一小节（推荐每层次缩进四个空格)  
+    * 第二小节  
+        * 第一小小节
+        * 第二小小节
+        * 第三小小节
+    * 第三小节
+* 第三节
+
+```
+* 第一节
+* 第二节
+    * 第一小节（推荐每层次缩进四个空格)  
+    * 第二小节  
+        * 第一小小节
+        * 第二小小节
+        * 第三小小节
+    * 第三小节
+* 第三节
+```
+
++ 第一节
++ 第二节
+    + 第一小节（推荐每层次缩进四个空格)  
+    + 第二小节  
+        + 第一小小节
+        + 第二小小节
+        + 第三小小节
+    + 第三小节
++ 第三节
+
+```
++ 第一节
++ 第二节
+    + 第一小节（推荐每层次缩进四个空格)  
+    + 第二小节  
+        + 第一小小节
+        + 第二小小节
+        + 第三小小节
+    + 第三小节
++ 第三节
+```
+
+- 第一节
+- 第二节
+    - 第一小节（推荐每层次缩进四个空格)  
+    - 第二小节  
+        - 第一小小节
+        - 第二小小节
+        - 第三小小节
+    - 第三小节
+- 第三节
+
+```
+- 第一节
+- 第二节
+    - 第一小节（推荐每层次缩进四个空格)  
+    - 第二小节  
+        - 第一小小节
+        - 第二小小节
+        - 第三小小节
+    - 第三小节
+- 第三节
+```
+
+---->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base target="_blank"/>
+    <style type="text/css">html {
+    height: 99%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    min-width: 700px;
+}
+
+#container {
+    width: 100%;
+    height: 95%;
+}
+
+#left {
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+}
+
+#in {
+    width: 100%;
+    height: 100%;
+}
+
+#right {
+    display: inline-block;
+    padding-left: 1px;
+    width: 50%;
+    height: 100%;
+    border-left: 1px dashed;
+}
+
+#out {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#bar {
+    width: 100%;
+    height: 25px;
+    border-width: 0;
+    background-color: #222222;
+    color: #dbdbdb;
+    font-family: 华文楷体;
+}
+
+#logo {
+    float: left;
+    height: 23px;
+    margin-left: 50px;
+}
+
+#bar .doc-this {
+    float: left;
+    margin-left: 5px;
+    margin-top: 3px;
+    font-size: 15px;
+    font-family: 黑体;
+}
+
+#bar .doc-select {
+    float: left;
+    height: 22px;
+    width: 150px;
+    margin-right: 30px;
+    margin-top: 1px;
+    border: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #222222;
+    color: #dbdbdb;
+}
+
+#bar a {
+    color: #dbdbdb;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Courier New", 华文楷体;
+    line-height: 1.8;
+    margin-left: 10px;
+}
+
+#bar a:hover {
+    color: #ffffff;
+}
+
+#tools {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#tools li {
+    float: left;
+    height: 23px;
+    width: 55px;
+    margin-top: 2px;
+    cursor: default;
+}
+
+#tools li:hover {
+    color: #ffffff;
+}
+</style>
+    <script language="javascript">var password = "qweqwe";
+var enterPressFlag = null;
+
+Function.prototype.getMutilines = function () {
+    var content = new String(this);
+    var start = content.indexOf('/*') + 3;
+    var stop = content.lastIndexOf('*/');
+    return content.substring(start, stop);
+};
+
+var content = function () {
+    /*
+    <h1 id="-http-md-littletools-ml-image-favicon-ico-markdown-http-md-littletools-ml-"><a href="http://md.littletools.ml"><img src="http://md.littletools.ml/image/favicon.ico" alt=""> markdown简要语法说明</a></h1>
+<h2 id="1-">1. 标题</h2>
+<h1 id="-">一级标题</h1>
+<h2 id="-">二级标题</h2>
+<h3 id="-">三级标题</h3>
+<h4 id="-">四级标题</h4>
+<h5 id="-">五级标题</h5>
+<h6 id="-">六级标题</h6>
+<pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre><h2 id="2-">2. 加粗，斜体</h2>
+<p><strong>加粗</strong>
+<strong>加粗</strong>
+<em>斜体</em>
+<em>斜体</em></p>
+<pre><code>**加粗**
+__加粗__
+*斜体*
+_斜体_
+</code></pre><h2 id="3-">3. 链接，图片</h2>
+<p><a href="http://www.baidu.com">百度超链接</a></p>
+<p><a href="http://www.baidu.com" title="出自www.baidu.com">常用语参考文献的，带提示的超链接</a></p>
+<p><img src="" alt="百度图标，在链接失效的时候显示，本文字"></p>
+<p><img src="https://www.baidu.com/img/baidu_jgylogo3.gif" alt="百度图标，在链接失效的时候显示，本文字"></p>
+<p><a href="http://www.baidu.com"><img src="https://www.baidu.com/img/baidu_jgylogo3.gif" alt="百度图标，在链接失效的时候显示，本文字"></a></p>
+<pre><code>[百度超链接](http://www.baidu.com)
+
+[常用语参考文献的，带提示的超链接][1]
+[1]:http://www.baidu.com "出自www.baidu.com"
+
+![百度图标，在链接失效的时候显示，本文字]()
+
+![百度图标，在链接失效的时候显示，本文字](https://www.baidu.com/img/baidu_jgylogo3.gif)
+
+[![百度图标，在链接失效的时候显示，本文字](https://www.baidu.com/img/baidu_jgylogo3.gif)](http://www.baidu.com)
+</code></pre><h2 id="4-">4. 层次</h2>
+<ol>
+<li>第一节</li>
+<li>第二节<ol>
+<li>第一小节（推荐每层次缩进四个空格)  </li>
+<li>第二小节  <ol>
+<li>第一小小节</li>
+<li>第二小小节</li>
+<li>第三小小节</li>
+</ol>
+</li>
+<li>第三小节</li>
+</ol>
+</li>
+<li>第三节</li>
+</ol>
+<pre><code>1. 第一节
+2. 第二节
+    1. 第一小节（推荐每层次缩进四个空格)  
+    2. 第二小节  
+        1. 第一小小节
+        2. 第二小小节
+        3. 第三小小节
+    3. 第三小节
+3. 第三节
+</code></pre><ol>
+<li>第一节</li>
+<li>第二节<ol>
+<li>第一小节（推荐每层次缩进四个空格)  </li>
+<li>第二小节  <ol>
+<li>第一小小节</li>
+<li>第二小小节</li>
+<li>第三小小节</li>
+</ol>
+</li>
+<li>第三小节</li>
+</ol>
+</li>
+<li>第三节</li>
+</ol>
+<pre><code>1. 第一节
+*  第二节
+    1. 第一小节（推荐每层次缩进四个空格)  
+    *  第二小节  
+        1. 第一小小节
+        *  第二小小节
+        *  第三小小节
+    *  第三小节
+*  第三节
+</code></pre><ul>
+<li>第一节</li>
+<li>第二节<ul>
+<li>第一小节（推荐每层次缩进四个空格)  </li>
+<li>第二小节  <ul>
+<li>第一小小节</li>
+<li>第二小小节</li>
+<li>第三小小节</li>
+</ul>
+</li>
+<li>第三小节</li>
+</ul>
+</li>
+<li>第三节</li>
+</ul>
+<pre><code>* 第一节
+* 第二节
+    * 第一小节（推荐每层次缩进四个空格)  
+    * 第二小节  
+        * 第一小小节
+        * 第二小小节
+        * 第三小小节
+    * 第三小节
+* 第三节
+</code></pre><ul>
+<li>第一节</li>
+<li>第二节<ul>
+<li>第一小节（推荐每层次缩进四个空格)  </li>
+<li>第二小节  <ul>
+<li>第一小小节</li>
+<li>第二小小节</li>
+<li>第三小小节</li>
+</ul>
+</li>
+<li>第三小节</li>
+</ul>
+</li>
+<li>第三节</li>
+</ul>
+<pre><code>+ 第一节
++ 第二节
+    + 第一小节（推荐每层次缩进四个空格)  
+    + 第二小节  
+        + 第一小小节
+        + 第二小小节
+        + 第三小小节
+    + 第三小节
++ 第三节
+</code></pre><ul>
+<li>第一节</li>
+<li>第二节<ul>
+<li>第一小节（推荐每层次缩进四个空格)  </li>
+<li>第二小节  <ul>
+<li>第一小小节</li>
+<li>第二小小节</li>
+<li>第三小小节</li>
+</ul>
+</li>
+<li>第三小节</li>
+</ul>
+</li>
+<li>第三节</li>
+</ul>
+<pre><code>- 第一节
+- 第二节
+    - 第一小节（推荐每层次缩进四个空格)  
+    - 第二小节  
+        - 第一小小节
+        - 第二小小节
+        - 第三小小节
+    - 第三小节
+- 第三节
+</code></pre>
+    */
+};
+
+
+window.onload = function () {
+    if (location.protocol.startsWith("http")) {
+        document.body.innerHTML = '<div id="background"><div id="container"><input id="pass" type="password" placeholder="请输入文档密码..." onkeypress=\'enterPress(event)\' onkeydown=\'enterPress()\'/><button id="submit" type="button">确认</button></div></div>';
+    } else {
+        document.body.innerHTML = content.getMutilines();
+    }
+    var btn = document.getElementById("submit");
+    btn.onclick = function () {
+        checkPwd();
+    };
+}
+
+function enterPress(e) {
+    var e = e || window.event;
+    if (e.keyCode == 13 && enterPressFlag != 13) {
+        checkPwd();
+    }
+    enterPressFlag = e.keyCode;
+}
+
+function checkPwd() {
+    var pass = document.getElementById("pass");
+    if (pass.value == password) {
+        document.body.innerHTML = content.getMutilines();
+    } else {
+        alert("密码错误，请重试");
+        pass.value = "";
+        pass.focus();
+    }
+}</script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px Calibri, helvetica, arial, freesans, clean, sans-serif;
+            color: #000;
+            line-height: 1.5em;
+            padding: .7em;
+        }
+
+        p {
+            margin-top: .7em;
+        }
+
+        table {
+            font-size: inherit;
+            margin: 1em;
+        }
+
+        table th {
+            padding: .2em 1em;
+            border-bottom: 1px solid #bbb;
+        }
+
+        table td {
+            padding: .2em 1em;
+            border-bottom: 1px solid #ddd;
+        }
+
+        input[type=image], input[type=password], input[type=text], textarea {
+            font: 99% helvetica, arial, freesans, sans-serif;
+        }
+
+        option, select {
+            padding: 0 .25em;
+        }
+
+        optgroup {
+            margin-top: .5em;
+        }
+
+        code, pre {
+            font: 12px Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+        }
+
+        pre {
+            border-radius: 3px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 1em 0;
+            font-size: 12px;
+            background-color: #eee;
+            border: 1px solid #ddd;
+            padding: 10px;
+            line-height: 1.5em;
+            color: #444;
+            overflow: auto;
+            -webkit-box-shadow: rgba(0, 0, 0, .07) 0 1px 2px inset;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+        }
+
+        pre code {
+            padding: 0;
+            font-size: 12px;
+            background-color: #eee;
+            border: none;
+        }
+
+        code {
+            font-size: 12px;
+            background-color: #f8f8ff;
+            color: #444;
+            padding: 0 .2em;
+            border: 1px solid #dedede;
+        }
+
+        img {
+            max-width: 100%;
+            border: 0;
+        }
+
+        abbr {
+            border-bottom: none;
+        }
+
+        a {
+            color: #4183c4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a code, a:link code, a:visited code {
+            color: #4183c4;
+        }
+
+        h1, h2, h3 {
+            margin: 1em 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            border: 0;
+        }
+
+        h1 {
+            margin-top: 1.5em;
+            padding-top: .5em;
+            border-top: 4px solid #aaa;
+            font-size: 170%;
+        }
+
+        h1:first-child {
+            margin-top: 0;
+            padding-top: .25em;
+            border-top: none;
+        }
+
+        h2 {
+            padding-top: .5em;
+            border-top: 4px solid #e0e0e0;
+            font-size: 150%;
+        }
+
+        h3 {
+            margin-top: 1em;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+        }
+
+        ul {
+            margin: 0 0 0 2.5em;
+        }
+
+        ol {
+            margin: 0 0 0 2.5em;
+        }
+
+        ol ol, ol ul, ul ol, ul ul {
+            margin: 0 0 0 2em;
+        }
+
+        blockquote {
+            margin: 1em 0;
+            padding-left: .6em;
+            border-left: 5px solid #ddd;
+            color: #555;
+        }
+
+        dt {
+            margin-left: 1em;
+            font-weight: 700;
+        }
+
+        dd {
+            margin-bottom: 1em;
+            margin-left: 2em;
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                margin: 10px auto;
+                width: 748px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>
